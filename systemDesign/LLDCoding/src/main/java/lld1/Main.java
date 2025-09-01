@@ -32,5 +32,11 @@ public class Main {
         System.out.println("Updated Student City (direct access): " + student2.city);
 
         System.out.println("-----------------------");
+
+        // Checking Access Modifiers from same package-------------------------
+        // student1.name = "Bob"; // Error: name has private access in Student
+        student1.age = 21; // Allowed: age has protected access in Student
+        student1.city = "Chicago"; // Allowed: city has default access in Student
+        student1.universityName = "Scalar University"; // Allowed: universityName has public access
     }
 }
