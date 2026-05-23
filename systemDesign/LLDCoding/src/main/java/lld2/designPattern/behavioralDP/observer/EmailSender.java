@@ -10,7 +10,7 @@ public class EmailSender implements OrderPlacedSubscriber {
     @Override
     public ReturnData announceOrderPlaced() {
         sendEmail();
-        return null;
+        return new ReturnData();
     }
 
     public void sendEmail() {

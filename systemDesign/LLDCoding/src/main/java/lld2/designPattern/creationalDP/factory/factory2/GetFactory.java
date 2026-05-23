@@ -3,6 +3,7 @@ package lld2.designPattern.creationalDP.factory.factory2;
 public class GetFactory {
 
     // Practical factory method
+    // subclass decides the instantiation
     public static UIFactory getFactory(SuportedPlatform platform) {
         switch (platform) {
             case ANDROID:

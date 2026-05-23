@@ -19,6 +19,7 @@ public class Flutter {
 
     // to connect with factory methods
     // Abstract factory method
+    // subclass decides the instantiation
     public UIFactory getUIFactory() {
         switch (platform) {
             case ANDROID:

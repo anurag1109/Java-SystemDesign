@@ -19,13 +19,12 @@ public class IntelligentStudent extends Student {
         this.iq = ist.iq;
     }
 
+    // override copy method
     public IntelligentStudent copy() {
         // IntelligentStudent ist = new IntelligentStudent(this.getName(),
         // this.getAge(), this.getAddress(), this.getPhone(), this.getEmail(), this.iq);
         IntelligentStudent ist = new IntelligentStudent(this);
 
         return ist;
-
     }
-
 }
