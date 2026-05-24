@@ -21,6 +21,12 @@ public class Client {
         UIFactory factory2 = app2.getUIFactoryPractical();
         Button button2 = factory2.createButton();
         button2.changeSize();
+
+        // here flutter class is not needed at all we can directly call the practical
+        // factory method to get the factory object and create the button
+        UIFactory app3 = GetFactory.getFactory(SuportedPlatform.ANDROID);
+        Button button3 = app3.createButton();
+        button3.changeSize();
     }
 
 }

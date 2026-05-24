@@ -25,6 +25,16 @@ public class Client {
         UIFactory factory = app.getUIFactory();
         Button button = factory.createButton();
         button.changeSize();
+
+        // create another factory and button to show that we can easily switch between
+        // factories
+        UIFactory factory1 = new AndroidUIFactory();
+        Button button1 = factory1.createButton();
+        button1.changeSize();
+
+        UIFactory factory2 = new IOSUIFactory();
+        Button button2 = factory2.createButton();
+        button2.changeSize();
     }
 
 }
