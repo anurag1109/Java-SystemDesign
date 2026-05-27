@@ -2,14 +2,14 @@ package lld2.designPattern.behavioralDP.strategy.usingFactoryStrategy;
 
 public class PaymentContext {
 
-    public static PaymentStrategy context(Mode mode, String details) {
-        switch (mode) {
-            case CREDIT_CARD:
-                return new CreditCardPayment(details);
-            case PAYPAL:
-                return new PayPalPayment(details);
-            default:
-                throw new IllegalArgumentException("Unsupported payment mode: " + mode);
-        }
+    // this is the context class which will use the strategy object to make payment
+    PaymentStrategy paymentStrategy;
+
+    public PaymentContext(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
+    }
+
+    public void makePayment(int amount) {
+        paymentStrategy.pay(amount);
     }
 }
