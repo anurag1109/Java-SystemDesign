@@ -14,10 +14,8 @@ package lld2.designPattern.behavioralDP.notifyMeObserver;
  * SOLUTION: Observer Pattern
  * ============================================================================
  * The Observer Pattern defines a one-to-many dependency between objects such
- * that
- * when one object (Observable) changes state, all its dependents (Observers)
- * are
- * notified automatically.
+ * that when one object (Observable) changes state, all its dependents
+ * (Observers) are notified automatically.
  * 
  * ============================================================================
  * COMPONENTS:

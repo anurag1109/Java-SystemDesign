@@ -3,6 +3,7 @@ package lld2.designPattern.behavioralDP.observer;
 public class Client {
 
     public static void main(String[] args) {
+        // only one instance of Flipkart should be there => singleton pattern
         Flipkart flipkart = Flipkart.getInstance();
         // add subscribers
 
