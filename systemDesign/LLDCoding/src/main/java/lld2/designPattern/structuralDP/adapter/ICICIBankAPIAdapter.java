@@ -3,7 +3,11 @@ package lld2.designPattern.structuralDP.adapter;
 import lld2.designPattern.structuralDP.adapter.thirdparty.icicibank.IciciBankAPI;
 
 public class ICICIBankAPIAdapter implements BankAPIAdapter {
-    private IciciBankAPI iciciBankAPI = new IciciBankAPI();
+    private IciciBankAPI iciciBankAPI;
+
+    public ICICIBankAPIAdapter(IciciBankAPI iciciBankAPI) {
+        this.iciciBankAPI = iciciBankAPI;
+    }
 
     @Override
     public double getBalance(String accountNumber) {

@@ -1,22 +1,16 @@
 package lld2.designPattern.structuralDP.adapter;
 
+import lld2.designPattern.structuralDP.adapter.thirdparty.icicibank.IciciBankAPI;
+
 public class PhonePe {
-    private BankAPIAdapter bankAPI;
 
-    public String getName() {
-        return name;
-    }
-
-    private String name;
-
-    public PhonePe(BankAPIAdapter bankAPI, String name) {
-        this.bankAPI = bankAPI;
-        this.name = name;
-    }
-
-    double doSomething() throws InterruptedException {
-        double currentBalance = bankAPI.getBalance("accountNumber");
-        Thread.sleep(25 * 24 * 60 * 60 * 1000);
-        return currentBalance * 2;
+    public static void main(String[] args) throws InterruptedException {
+        // we can create instance of real API and pass it to adapter
+        BankAPIAdapter bankAPIAdapter = new ICICIBankAPIAdapter(new IciciBankAPI());
+        System.out.println(bankAPIAdapter.getBalance(""));
+        // or we can create instance of adapter and inside it create instance of real
+        // API
+        BankAPIAdapter bankAPIAdapter2 = new YesBankAPIAdapter();
+        System.out.println(bankAPIAdapter2.getBalance(""));
     }
 }
